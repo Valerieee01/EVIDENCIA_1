@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMULARIO</title>
+</head>
+
+<body>
+  <article>
+    <H4>Campo Requerido</H4>
+    <form action="" method="get" autocomplete="off">
+      <label for="n_incidencia">Número incidencia: </label>
+      <input type="text" name="n_incidencia" id="n_incidencia" minlength="5" maxlength="10"
+        pattern="[1,2,3,4,5,6,7,8,9,10,a-zZ-a]">
+      <br><br>
+      <label for="fecha_hora">Fecha / Hora de recepción: </label>
+      <input type="datetime-local" name="fecha_hora" id="fecha_hora" required>
+  </article>
+  <article>
+    <h4>Información de Usuario</h4>
+    <label for="name">Nombre del cliente</label>
+    <input type="text" name="name" id="name" pattern="[a-Zz-a, ]" minlength="2" maxlength="30" required>
+    <br><br>
+    <label for="id">Tipo de identificación: </label>
+    <select name="Tipo_id" id="Tipo_id" required>
+      <option value="">Seleccione</option>
+      <option value="CC">CC</option>
+      <option value="TI">TI</option>
+      <option value="RC">Registro Civil</option>
+      <option value="T">Cedula Extranjeria</option>
+    </select>
+    <br><br>
+    <label for="email">E-mail: </label>
+    <input type="email" name="email" id="email" required minlength="5" maxlength="30">
+    <br><br>
+    <label for="identificación">Identificación: </label>
+    <input type="text" name="identificación" id="identificación" pattern="[1,2,3,4,5,6,7,8,9,10]" required>
+    <br><br>
+    <label for="tipo_solicitante">Tipo de Solicitante</label>
+    <select name="tipo_solicitante" id="tipo_solicitante" required>
+      <option value="">Seleccione</option>
+      <option value="Docente">Docente</option>
+      <option value="Estudiante">Estudiante</option>
+      <option value="Administrativo">Administrativo</option>
+    </select>
+  </article>
+
+
+
+  </form>
+</body>
+
+</html>
