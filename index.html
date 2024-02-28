@@ -10,9 +10,9 @@
 <body>
   <article>
     <H4>Campo Requerido</H4>
-    <form action="" method="get" autocomplete="off">
+    <form action="" method="get" autocomplete="on">
       <label for="n_incidencia">Número incidencia: </label>
-      <input type="text" name="n_incidencia" id="n_incidencia" minlength="5" maxlength="10" pattern="[A-Za-z]" required>
+      <input type="text" name="n_incidencia" id="n_incidencia" pattern="[A-Za-z0-9]{1,15}" required>
       <br><br>
       <label for="fecha_hora">Fecha / Hora de recepción: </label>
       <input type="datetime-local" name="fecha_hora" id="fecha_hora" required>
@@ -20,7 +20,7 @@
   <article>
     <h4>Información de Usuario</h4>
     <label for="name">Nombre del cliente</label>
-    <input type="text" name="name" id="name" pattern="[A-Za-z, ]" minlength="2" maxlength="30" required>
+    <input type="text" name="name" id="name" pattern="[A-Za-z, ]{3,30}" required>
     <br><br>
     <label for="id">Tipo de identificación: </label>
     <select name="Tipo_id" id="Tipo_id" required>
@@ -35,7 +35,7 @@
     <input type="email" name="email" id="email" required minlength="5" maxlength="30">
     <br><br>
     <label for="identificación">Identificación: </label>
-    <input type="text" name="identificación" id="identificación" pattern="[1,2,3,4,5,6,7,8,9,10]" required>
+    <input type="text" name="identificación" id="identificación" pattern="[0-9]{1,20}" required>
     <br><br>
     <label for="tipo_solicitante">Tipo de Solicitante</label>
     <select name="tipo_solicitante" id="tipo_solicitante" required>
@@ -48,10 +48,10 @@
   <article>
     <h4>Información de Contacto</h4>
     <label for="pais">País: </label>
-    <input type="text" name="pais" id="pais" required pattern="[A-Zz-a, ]" minlength="3" maxlength="20">
+    <input type="text" name="pais" id="pais" required pattern="[A-Za-z]{3,30}">
     <br><br>
     <label for="Ciudad">Ciudad: </label>
-    <input type="text" name="Ciudad" id="Ciudad" required pattern="[A-Zz-a, ]" minlength="3" maxlength="20">
+    <input type="text" name="Ciudad" id="Ciudad" required pattern="[A-Za-z, ]{3,30}" minlength="3" maxlength="20">
     <br><br>
     <label for="telefono">Teléfono: </label>
     <input type="tel" name="telefono" id="telefono" required minlength="10" maxlength="10">
@@ -65,14 +65,13 @@
     </select>
     <br><br>
     <label for="departamento">Departamento: </label>
-    <input type="text" name="departamento" id="departamento" required pattern="[A-Zz-a, ]" maxlength="20" minlength="3">
+    <input type="text" name="departamento" id="departamento" required pattern="[A-Za-z ]{3,40}">
     <br><br>
     <label for="celular">Celular: </label>
-    <input type="text" name="celular" id="celular" required minlength="10" maxlength="10"
-      pattern="[1,2,3,4,5,6,7,8,9,10]">
+    <input type="text" name="celular" id="celular" required pattern="[0-9]{10,10}">
     <br><br>
     <label for="direccion">Dirección: </label>
-    <input type="text" name="direccion" id="direccion" pattern="[A-Za-z0-9]+" minlength="3" maxlength="30" required>
+    <input type="text" name="direccion" id="direccion" pattern="[A-Za-z0-9]{3,15}" required>
   </article>
   <article>
     <h4>Información de Solicitud</h4>
@@ -80,7 +79,7 @@
     <input type="date" name="fecha_vencimiento" id="fecha_vencimiento" required>
     <br><br>
     <label for="asunto">Asunto: </label>
-    <input type="text" name="asunto" id="asunto" required pattern="[A-Za-z, ]" minlength="3" maxlength="10">
+    <input type="text" name="asunto" id="asunto" required pattern="[A-Za-z, ]{1,20}">
     <br><br>
     <label for="Descripcion">Descripción: </label>
     <textarea name="Descripcion" id="" cols="30" rows="10" required minlength="5" maxlength="50"></textarea>
