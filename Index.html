@@ -75,7 +75,22 @@
     <label for="direccion">Dirección: </label>
     <input type="text" name="direccion" id="direccion" pattern="[A-Za-z0-9]+" minlength="3" maxlength="30" required>
   </article>
+  <article>
+    <h4>Información de Solicitud</h4>
+    <label for="fecha_vencimiento">Fecha de Vencimiento: </label>
+    <input type="date" name="fecha_vencimiento" id="fecha_vencimiento" required>
+    <br><br>
+    <label for="asunto">Asunto: </label>
+    <input type="text" name="asunto" id="asunto" required pattern="[a-zZ-A, ]" minlength="3" maxlength="10">
+    <br><br>
+    <label for="Descripcion">Descripción: </label>
+    <textarea name="Descripcion" id="" cols="30" rows="10" required minlength="5" maxlength="50"></textarea>
+    <br><br>
+    <label for="adjunto">Adjunto: </label>
+    <input type="file" name="adjunto" id="adjunto" required accept="image/png, image/jpg" multiple>
 
+
+  </article>
 
 
   </form>
